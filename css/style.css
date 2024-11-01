@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/assets/images/fondo8.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre toda la pantalla */
+    position: relative; /* Necesario para posicionar los quesitos */
+    overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS existente para el contenedor de quesitos */
+.quesito-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Asegúrate de que el contenedor de quesitos tenga un z-index más bajo */
+}
+
+.title, .input_name, .input_number, button {
+    position: relative; /* Para que estos elementos se posicionen por encima del contenedor de quesitos */
+    z-index: 2; /* Asegura que el input y otros elementos tengan un z-index más alto */
+}
+
+
+.quesito {
+    position: absolute;
+    width: 100px; /* Ajusta el tamaño según necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    animation: caer 5s linear infinite; /* Animación de caída */
+}
+
+@keyframes caer {
+    0% {
+        top: -50px; /* Comienza fuera de la pantalla */
+        opacity: 1; /* Totalmente visible */
+    }
+    100% {
+        top: 100%; /* Termina en la parte inferior */
+        opacity: 0; /* Desaparece al llegar abajo */
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.welcome-title {
+    font-size: 32px;
+    color: #4a90e2; /* Color principal */
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-subtitle {
+    font-size: 18px;
+    color: #555; /* Color secundario para el subtítulo */
+    margin-bottom: 30px;
+}
+
+/* Estilos del contenedor principal */
+.inicio {
+    background-color: #ffffffb0;
+    padding: 40px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    height: 600px;
+    /* Borde arcoíris */
+    border: 6px solid;
+    border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
+    border-radius: 6px 6px;
+}
+
+/* Estilos de los títulos */
+h1 {
+    font-size: 24px;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+/* Estilos del input de nombre */
+.input_name {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #4a90e2; /* Mantiene el borde azul */
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff; /* Fondo blanco para el input */
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto arcoíris en el texto del input de nombre */
+.input_name:focus {
+    outline: none;
+    border-color: #4a90e2; /* Borde azul al enfocarse */
+    color: transparent; /* Hace que el color base sea transparente para aplicar el gradiente */
+    background-color: #fff; /* Asegura que el fondo siga siendo blanco */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente en el texto */
+    background-clip: text; /* Aplica el gradiente solo al texto */
+    -webkit-background-clip: text;
+}
+
+/* Estilos del input de número */
+.input_number {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.input_number:focus,
+.input_number:not(:placeholder-shown) { /* Mantiene el estilo cuando hay texto */
+    outline: none;
+    border-color: #4a90e2; /* Mantiene el borde azul al enfocarse */
+    color: transparent; /* Hace que el color base sea transparente para aplicar el gradiente */
+    background-color: #fff; /* Asegura que el fondo siga siendo blanco */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente en el texto */
+    background-clip: text; /* Aplica el gradiente solo al texto */
+    -webkit-background-clip: text;
+}
+
+.input_name {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #4a90e2; /* Borde azul por defecto */
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff; /* Fondo blanco para el input */
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto arcoíris en el texto del input de nombre */
+.input_name:focus,
+.input_name:not(:placeholder-shown) { /* Mantiene el estilo cuando hay texto */
+    outline: none;
+    border-color: #4a90e2; /* Mantiene el borde azul al enfocarse */
+    color: transparent; /* Hace que el color base sea transparente para aplicar el gradiente */
+    background-color: #fff; /* Asegura que el fondo siga siendo blanco */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente en el texto */
+    background-clip: text; /* Aplica el gradiente solo al texto */
+    -webkit-background-clip: text;
+}
+
+/* Estilos del botón */
+button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f39c12;
+}
+
+/* Estilos para los mensajes de error */
+p {
+    color: #e74c3c;
+    font-size: 14px;
+    margin: -15px 0 15px 0;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .input_name,
+    .input_number {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* CATEGORIAS  */
+
+
+/* TITULO CATEGORIAS */
+.categorias {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 10px; 
+    flex-wrap: nowrap; 
+    /* border: 4px solid red; */
+    overflow-x: auto; 
+    margin-left: 20px;
+    height: 700px;
+}
+
+
+.category__image {
+    margin-bottom: 40px;
+    margin: 20px;
+    width: 340px;
+    height: 200px;
+    border-radius: 5%;
+    box-shadow: 0px 4px 10px rgb(189, 169, 169); /* Añade una sombra */
+    opacity: 1; /* Asegúrate de que la imagen sea visible desde el inicio */
+    transition: transform 0.3s ease; /* Suaviza la transición del transform */
+}
+
+/* Escala al pasar el ratón */
+.category__image:hover {
+    transform: scale(1.1); /* Escala la imagen al 110% al pasar el mouse */
+}
+
+/* Define la animación de rotación y aparición */
+@keyframes rotateAppear {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: rotate(0deg) scale(0); /* Comienza en escala 0 */
+    }
+    50% {
+        opacity: 1; /* Se vuelve visible */
+        transform: rotate(180deg) scale(1); /* Rota 180 grados y escala a tamaño completo */
+    }
+    100% {
+        opacity: 1; /* Se mantiene visible */
+        transform: rotate(360deg) scale(1); /* Rota 360 grados y se queda en tamaño completo */
+    }
+}
+
+
+
+
+/* TITULO */
+.tittle_category {
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    text-align: center; /* Centrar el texto */
+    color: #4A90E2; /* Color del texto */
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease forwards, colorChange 3s ease infinite alternate; /* Animaciones */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(-20px); /* Se mueve hacia arriba */
+    }
+    100% {
+        opacity: 1; /* Se vuelve visible */
+        transform: translateY(0); /* Se restaura la posición */
+    }
+}
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+    0% {
+        color: #4A90E2; /* Color inicial */
+    }
+    50% {
+        color: #E94E77; /* Color intermedio */
+    }
+    100% {
+        color: #F5A623; /* Color final */
+    }
+}
+
+
+.correcta{
+    background-color: green;
+}
+.incorrecta{
+    background-color: red;
+}

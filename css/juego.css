@@ -1,0 +1,85 @@
+.question{
+    border: 1px solid red;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+/* CONTAINER PREGUNTAS */
+.trivia_container_question {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+.question_trivia {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.answers {
+    list-style: none;
+    padding: 0;
+}
+.answer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.answer:hover {
+    background-color: #0056b3;
+}
+
+.trivia_container_question{
+    width: 900px;
+}
+
+.container_answers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.answer{
+    padding: 14px;
+    width: 350px;
+}
+
+#mensaje_respuesta {
+    position: absolute; /* Posiciona el mensaje absolutamente dentro del contenedor */
+    top: 0; /* En la parte superior del contenedor */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajustar al centro */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    color: white; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente */
+    text-align: center; /* Centrar el texto */
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Suaviza la transición de opacidad */
+}
+
+/* Clase para mostrar el mensaje */
+.show {
+    opacity: 1; /* Hacer visible el mensaje */
+}
+
+/* Clase para ocultar el mensaje */
+.hidden {
+    display: none; /* Ocultar el mensaje */
+}
