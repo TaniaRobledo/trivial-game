@@ -42,35 +42,3 @@ class Quesito {
 }
 
 
-
-
-const container = document.querySelector('.quesito-container');
-
-function crearQuesito() {
-    const quesito = document.createElement('img');
-    quesito.src = './assets/images/quesito.png'; // Ruta de la imagen del quesito
-    quesito.className = 'quesito';
-
-    // Generar una posición aleatoria en el eje X
-    const posicionX = Math.random() * (window.innerWidth - 50); // Asegúrate de que no salga de la pantalla
-    quesito.style.left = `${posicionX}px`;
-
-    // Posicionar el quesito en la parte superior de la pantalla
-    quesito.style.top = `-50px`; // Comienza fuera de la pantalla
-
-    container.appendChild(quesito);
-
-    // Elimina el quesito después de que termine la animación
-    quesito.addEventListener('animationend', () => {
-        quesito.remove();
-    });
-}
-
-// Crear un número limitado de quesitos al cargar la página
-const numeroDeQuesitos = 10; // Cambia este número para aumentar o disminuir la cantidad de quesitos
-
-window.onload = function() {
-    for (let i = 0; i < numeroDeQuesitos; i++) {
-        crearQuesito();
-    }
-};

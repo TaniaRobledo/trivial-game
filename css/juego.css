@@ -58,7 +58,7 @@
     width: 350px;
 }
 
-#mensaje_respuesta {
+.mensaje_respuesta {
     position: absolute; /* Posiciona el mensaje absolutamente dentro del contenedor */
     top: 0; /* En la parte superior del contenedor */
     left: 50%; /* Centrar horizontalmente */
@@ -82,4 +82,13 @@
 /* Clase para ocultar el mensaje */
 .hidden {
     display: none; /* Ocultar el mensaje */
+}
+
+.ganador{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.img_ganador{
+    box-shadow: 0px 4px 20px rgb(243, 241, 241);
 }

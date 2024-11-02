@@ -8,6 +8,8 @@ const trivia_container_question = document.getElementById('trivia_container_ques
 const categorias = document.getElementById('categorias')
 const question_trivia = document.getElementById('question_trivia');
 const container_answers = document.getElementById('container_answers');
+const final = document.getElementById('final');
+
 
 
 
@@ -40,3 +42,4 @@ enviarConfig.addEventListener('click', () => {
     setConfig()
     empezarJuego()
 })
+

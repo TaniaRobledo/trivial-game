@@ -9,13 +9,13 @@ class Jugador {
     }
 
     //Responder pregunta maquina
-    responderPreguntas(respuestas){
-        return  Math.floor(Math.random() * respuestas.length);
+    responderPreguntas(){
+        return  Math.floor(Math.random() * 4);
     }
 
     //elegir categoria amquina
-    elegirCategoria(categorias){
-        return  Math.floor(Math.random() * categorias.length);
+    elegirCategoria(){
+        return  Math.floor(Math.random() * 6);
     }
 
     //conseguir quesito
@@ -30,6 +30,7 @@ class Jugador {
 
     esGanador(){
         return this.caja.esGanador()
+        // return true
     }
     
     getNumeroQuesitos(){

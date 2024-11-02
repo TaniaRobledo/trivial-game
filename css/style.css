@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* CSS existente para el contenedor de quesitos */
@@ -136,17 +137,6 @@ h1 {
     border: 2px solid #4a90e2;
     border-radius: 8px;
     font-size: 16px;
-}
-
-.input_number:focus,
-.input_number:not(:placeholder-shown) { /* Mantiene el estilo cuando hay texto */
-    outline: none;
-    border-color: #4a90e2; /* Mantiene el borde azul al enfocarse */
-    color: transparent; /* Hace que el color base sea transparente para aplicar el gradiente */
-    background-color: #fff; /* Asegura que el fondo siga siendo blanco */
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente en el texto */
-    background-clip: text; /* Aplica el gradiente solo al texto */
-    -webkit-background-clip: text;
 }
 
 .input_name {
@@ -309,3 +299,45 @@ p {
 .incorrecta{
     background-color: red;
 }
+
+.container_quesitos{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+.img_quesito{
+    width: 30%;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.verde {
+    background-color: #4CAF50; /* Verde */
+}
+
+.azul {
+    background-color: #2196F3; /* Azul */
+}
+
+.amarillo {
+    background-color: #FFEB3B; /* Amarillo */
+}
+
+.naranja {
+    background-color: #FF9800; /* Naranja */
+}
+
+.rojo {
+    background-color: #F44336; /* Rojo */
+}
+
+.morado {
+    background-color: #9C27B0; /* Morado */
+}
+
