@@ -21,7 +21,7 @@
     <p id="error_nombre"></p>
 
     <h1>Número de jugadores para la CPU</h1>
-    <input class="input_number" type="number" id="numeroInput" min="1" max="1" placeholder="Número de jugadores permitido 1" />
+    <input class="input_number" type="number" id="numeroInput" min="1" max="1" required placeholder="Número de jugadores permitido 1" />
     <p id="error_numero"></p>
     
     <button id="enviarConfig">Empezar partida</button>
@@ -57,24 +57,32 @@
 
 <div id="mensaje_respuesta" class="hidden">¡RESPUESTA!</div>
 
-<div class="container_quesitos">
-    <div class="img_quesito" id="rojo"></div>
-    <div class="img_quesito" id="amarillo"></div>
-    <div class="img_quesito" id="verde"></div>
-    <div class="img_quesito" id="azul"></div>
-    <div class="img_quesito" id="morado"></div>
-    <div class="img_quesito" id="naranja"></div>
+
+<div class="container_quesitos" id="container_quesitos">
+    <div class="img_quesito" id="animals"></div>
+    <div class="img_quesito" id="history"></div>
+    <div class="img_quesito" id="science_technology"></div>
+    <div class="img_quesito" id="geography"></div>
+    <div class="img_quesito" id="entertainment"></div>
+    <div class="img_quesito" id="sports"></div>
 </div>
+
 
 
 <!-- FINAL -->
  <div class="final hidden" id="final">
-    <h1 class="ganador">!!!ENHORABUENA JAVIER!!</h1>
-    <H2>HAS GANADO</H2>
+    <h1 class="ganador">!!!ENHORABUENA JAVIER!!!</h1>
     <img class="img_ganador" src="./assets/images/ganador.jpg" alt="">
+    <button class="boton_inicio" id="boton_inicio">Volver a Jugar</button>
  </div>
 
 
+    <!--audio -->
+    <audio id="miAudio" src="./assets/sound/puzzle-game-bright-casual-video-game-music-249202.mp3" loop autoplay></audio>
+
+
+    
+<!-- container -->
 </div>
 
 

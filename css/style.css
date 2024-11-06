@@ -4,10 +4,10 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('/assets/images/fondo8.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Cubre toda la pantalla */
-    position: relative; /* Necesario para posicionar los quesitos */
-    overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+    background-image: url('/assets/images/fondo8.jpg');
+    background-size: cover; 
+    position: relative;
+    overflow: hidden; 
     background-repeat: no-repeat;
 
 }
@@ -23,41 +23,41 @@ body {
     position: relative;
 }
 
-/* CSS existente para el contenedor de quesitos */
+
 .quesito-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Asegúrate de que el contenedor de quesitos tenga un z-index más bajo */
+    z-index: 1; 
 }
 
 .title, .input_name, .input_number, button {
-    position: relative; /* Para que estos elementos se posicionen por encima del contenedor de quesitos */
-    z-index: 2; /* Asegura que el input y otros elementos tengan un z-index más alto */
+    position: relative; 
+    z-index: 2; 
 }
 
 
 .quesito {
     position: absolute;
-    width: 100px; /* Ajusta el tamaño según necesites */
-    height: auto; /* Mantiene la proporción de la imagen */
-    animation: caer 5s linear infinite; /* Animación de caída */
+    width: 100px; 
+    height: auto;
+    animation: caer 5s linear infinite; 
 }
 
 @keyframes caer {
     0% {
-        top: -50px; /* Comienza fuera de la pantalla */
-        opacity: 1; /* Totalmente visible */
+        top: -50px; 
+        opacity: 1;
     }
     100% {
-        top: 100%; /* Termina en la parte inferior */
-        opacity: 0; /* Desaparece al llegar abajo */
+        top: 100%; 
+        opacity: 0; 
     }
 }
 
-/* Estilos generales */
+
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -69,14 +69,14 @@ body {
 
 .welcome-title {
     font-size: 32px;
-    color: #4a90e2; /* Color principal */
+    color: #4a90e2;
     margin-bottom: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .welcome-subtitle {
     font-size: 18px;
-    color: #555; /* Color secundario para el subtítulo */
+    color: #555; 
     margin-bottom: 30px;
 }
 
@@ -111,21 +111,21 @@ h1 {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 2px solid #4a90e2; /* Mantiene el borde azul */
+    border: 2px solid #4a90e2; 
     border-radius: 8px;
     font-size: 16px;
-    background-color: #fff; /* Fondo blanco para el input */
+    background-color: #fff; 
     transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 /* Efecto arcoíris en el texto del input de nombre */
 .input_name:focus {
     outline: none;
-    border-color: #4a90e2; /* Borde azul al enfocarse */
-    color: transparent; /* Hace que el color base sea transparente para aplicar el gradiente */
-    background-color: #fff; /* Asegura que el fondo siga siendo blanco */
+    border-color: #4a90e2; 
+    color: transparent; 
+    background-color: #fff; 
     background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente en el texto */
-    background-clip: text; /* Aplica el gradiente solo al texto */
+    background-clip: text; 
     -webkit-background-clip: text;
 }
 
@@ -152,17 +152,17 @@ h1 {
 
 /* Efecto arcoíris en el texto del input de nombre */
 .input_name:focus,
-.input_name:not(:placeholder-shown) { /* Mantiene el estilo cuando hay texto */
+.input_name:not(:placeholder-shown) { 
     outline: none;
-    border-color: #4a90e2; /* Mantiene el borde azul al enfocarse */
-    color: transparent; /* Hace que el color base sea transparente para aplicar el gradiente */
-    background-color: #fff; /* Asegura que el fondo siga siendo blanco */
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente en el texto */
-    background-clip: text; /* Aplica el gradiente solo al texto */
+    border-color: #4a90e2;
+    color: transparent; 
+    background-color: #fff; 
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text; 
     -webkit-background-clip: text;
 }
 
-/* Estilos del botón */
+/* Estilos del boton */
 button {
     background-color: #4a90e2;
     color: white;
@@ -185,7 +185,7 @@ p {
     margin: -15px 0 15px 0;
 }
 
-/* Responsivo */
+
 @media (max-width: 480px) {
     h1 {
         font-size: 20px;
@@ -205,8 +205,6 @@ p {
 
 
 /* CATEGORIAS  */
-
-
 /* TITULO CATEGORIAS */
 .categorias {
     width: 100%;
@@ -228,29 +226,28 @@ p {
     width: 340px;
     height: 200px;
     border-radius: 5%;
-    box-shadow: 0px 4px 10px rgb(189, 169, 169); /* Añade una sombra */
-    opacity: 1; /* Asegúrate de que la imagen sea visible desde el inicio */
-    transition: transform 0.3s ease; /* Suaviza la transición del transform */
+    box-shadow: 0px 4px 10px rgb(189, 169, 169); 
+    opacity: 1; 
+    transition: transform 0.3s ease; 
 }
 
-/* Escala al pasar el ratón */
 .category__image:hover {
-    transform: scale(1.1); /* Escala la imagen al 110% al pasar el mouse */
+    transform: scale(1.1); 
 }
 
-/* Define la animación de rotación y aparición */
+
 @keyframes rotateAppear {
     0% {
-        opacity: 0; /* Comienza invisible */
-        transform: rotate(0deg) scale(0); /* Comienza en escala 0 */
+        opacity: 0;
+        transform: rotate(0deg) scale(0); 
     }
     50% {
-        opacity: 1; /* Se vuelve visible */
-        transform: rotate(180deg) scale(1); /* Rota 180 grados y escala a tamaño completo */
+        opacity: 1;
+        transform: rotate(180deg) scale(1); 
     }
     100% {
-        opacity: 1; /* Se mantiene visible */
-        transform: rotate(360deg) scale(1); /* Rota 360 grados y se queda en tamaño completo */
+        opacity: 1;
+        transform: rotate(360deg) scale(1); 
     }
 }
 
@@ -259,36 +256,35 @@ p {
 
 /* TITULO */
 .tittle_category {
-    font-size: 2.5rem; /* Tamaño de fuente grande */
-    text-align: center; /* Centrar el texto */
-    color: #4A90E2; /* Color del texto */
+    font-size: 2.5rem; 
+    text-align: center; 
+    color: #4A90E2;
     margin-bottom: 40px;
-    animation: fadeIn 1s ease forwards, colorChange 3s ease infinite alternate; /* Animaciones */
-    margin-bottom: 20px; /* Espacio inferior */
+    animation: titulo 1s ease forwards, colorChange 3s ease infinite alternate; 
+    margin-bottom: 20px;
 }
 
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
+
+@keyframes titulo {
     0% {
-        opacity: 0; /* Comienza invisible */
-        transform: translateY(-20px); /* Se mueve hacia arriba */
+        opacity: 0; 
+        transform: translateY(-20px);
     }
     100% {
-        opacity: 1; /* Se vuelve visible */
-        transform: translateY(0); /* Se restaura la posición */
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
 
-/* Animación de cambio de color */
 @keyframes colorChange {
     0% {
-        color: #4A90E2; /* Color inicial */
+        color: #4A90E2;
     }
     50% {
-        color: #E94E77; /* Color intermedio */
+        color: #E94E77;
     }
     100% {
-        color: #F5A623; /* Color final */
+        color: #F5A623;
     }
 }
 
@@ -296,25 +292,32 @@ p {
 .correcta{
     background-color: green;
 }
+
 .incorrecta{
     background-color: red;
 }
 
 .container_quesitos{
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: -220px;
+    left: 480px;
     width: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 2px;
     flex-wrap: wrap;
+    border: 4px solid rgb(100, 62, 176);
+    border-radius: 20%;
+    background-color: rgba(255, 255, 255, 0.633);
+    
 }
 .img_quesito{
+    margin: 2px;
     width: 30%;
     height: 50px;
-    border: 1px solid black;
+    border: 2px solid rgba(65, 34, 200, 0.966);
+    border-radius: 50%;
 }
 
 .verde {
@@ -340,4 +343,44 @@ p {
 .morado {
     background-color: #9C27B0; /* Morado */
 }
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: parpadeo 0.10s ease-in-out 5;
+}
+
+.final{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 3px solid red; */
+   /* height: 700px; */
+}
+
+
+.boton_inicio{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    display: block;
+    border: 1px solid black;
+    margin-left: 320px;
+    width: 200px;
+}
+
+
+
+
+
 

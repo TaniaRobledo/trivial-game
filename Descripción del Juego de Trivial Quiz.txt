@@ -1,0 +1,11 @@
+Descripción del Juego de Trivial:
+ 
+En este juego un jugador compite contra la máquina (CPU), ambos participantes eligen una categoría de preguntas.
+
+El objetivo del juego es acumular seis "quesitos", uno por cada categoría acertada, que representan puntos en el progreso del jugador. 
+Cada vez que un jugador responde correctamente a una pregunta de la categoría elegida, obtiene un quesito como recompensa, si la respuesta es incorrecta no se producen penalizaciones.
+
+El juego continúa hasta que uno de los dos participantes consigue reunir los seis quesitos necesarios para ganar.
+
+Para empezar a jugar sólo hay que introducir el nombre del jugador y dar empezar partida!
+(Las preguntas y respuestas están en inglés es lo malo)

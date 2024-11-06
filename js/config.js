@@ -9,8 +9,9 @@ const categorias = document.getElementById('categorias')
 const question_trivia = document.getElementById('question_trivia');
 const container_answers = document.getElementById('container_answers');
 const final = document.getElementById('final');
-
-
+const container_quesitos = document.getElementById('container_quesitos');
+const boton_inicio = document.getElementById('boton_inicio');
+const miAudio = document.getElementById('miAudio');
 
 
 
@@ -22,7 +23,6 @@ let config = {
 let nombre_jugador = ''
 
 //Funciones
-
 const saveName = () => {
     config.nombre_jugador = nombreInput.value
 }
@@ -42,4 +42,10 @@ enviarConfig.addEventListener('click', () => {
     setConfig()
     empezarJuego()
 })
+
+ // Selecciona el elemento y actualiza su contenido
+ const ganadorElements = document.getElementsByClassName('ganador');
+ ganadorElement.textContent = `!!!ENHORABUENA ${jugador.nombre.toUpperCase()}!!!`;
+
+
 

@@ -59,29 +59,29 @@
 }
 
 .mensaje_respuesta {
-    position: absolute; /* Posiciona el mensaje absolutamente dentro del contenedor */
-    top: 0; /* En la parte superior del contenedor */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-50%); /* Ajustar al centro */
-    padding: 10px 20px; /* Espaciado interno */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
-    color: white; /* Color del texto */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 18px; /* Tamaño de fuente */
-    text-align: center; /* Centrar el texto */
-    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 0.5s ease; /* Suaviza la transición de opacidad */
+    position: absolute;
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
+    padding: 10px 20px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center; 
+    z-index: 10;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
 }
 
 /* Clase para mostrar el mensaje */
 .show {
-    opacity: 1; /* Hacer visible el mensaje */
+    opacity: 1; 
 }
 
 /* Clase para ocultar el mensaje */
 .hidden {
-    display: none; /* Ocultar el mensaje */
+    display: none; 
 }
 
 .ganador{
